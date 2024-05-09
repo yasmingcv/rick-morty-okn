@@ -5,4 +5,33 @@ body {
   min-height: 100%;
   background-image: url("../assets/cielo-estrellado.png");
   background-repeat: repeat;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+header, header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+header img, header .nav img {
+  width: 420px;
+}
+header .nav {
+  gap: 80px;
+  list-style: none;
+}
+header .nav__item a {
+  color: inherit;
+  text-decoration: none;
+  color: #87F54E;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+header .nav__item {
+  transition: transform 0.3s ease-in-out;
+}
+header .nav__item:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=styles.css.map */
