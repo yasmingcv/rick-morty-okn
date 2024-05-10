@@ -17,6 +17,7 @@ header, header .nav {
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+  width: 100%;
 }
 header img, header .nav img {
   width: 420px;
@@ -24,6 +25,7 @@ header img, header .nav img {
 header .nav {
   gap: 80px;
   list-style: none;
+  width: 40%;
 }
 header .nav__item a {
   color: inherit;

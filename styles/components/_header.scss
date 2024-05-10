@@ -6,6 +6,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+    width: 100%;
 
     img {
         width: 420px;
@@ -15,6 +16,7 @@ header {
         @extend header;
         gap: 80px;
         list-style: none;
+        width: 40%;
 
         &__item a{
             color: inherit;
