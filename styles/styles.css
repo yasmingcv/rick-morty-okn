@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,4 +37,54 @@ header .nav__item {
 }
 header .nav__item:hover {
   transform: scale(1.2);
+}
+
+.planets {
+  display: grid;
+  place-self: center;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, minmax(100px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 250px));
+}
+.planets img:nth-child(1) {
+  place-self: center end;
+}
+.planets img:nth-child(2) {
+  place-self: center start;
+}
+.planets img:nth-child(3) {
+  place-self: center;
+}
+.planets img:nth-child(4) {
+  place-self: end;
+}
+.planets img:nth-child(5) {
+  place-self: center;
+}
+.planets img:nth-child(6) {
+  place-self: center;
+}
+.planets img:nth-child(7) {
+  place-self: center end;
+}
+.planets img:nth-child(8) {
+  place-self: center;
+}
+.planets img:nth-child(9) {
+  place-self: start end;
+}
+.planets img:nth-child(10) {
+  place-self: end center;
+}
+.planets img:nth-child(11) {
+  place-self: end center;
+}
+.planets img:nth-child(12) {
+  place-self: center end;
+}
+.planets img:nth-child(13) {
+  place-self: center end;
+}
+.planets img:nth-child(15) {
+  place-self: center;
 }/*# sourceMappingURL=styles.css.map */

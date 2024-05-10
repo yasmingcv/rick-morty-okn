@@ -1,0 +1,64 @@
+.planets {
+    display: grid;
+    place-self: center;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, minmax(100px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 250px));
+    
+
+    & img:nth-child(1){
+        place-self: center end;
+    }
+
+    & img:nth-child(2){
+        place-self: center start;
+    }
+
+    & img:nth-child(3){
+        place-self: center;
+    }
+
+    & img:nth-child(4){
+        place-self: end;
+    }
+
+    & img:nth-child(5){
+        place-self: center;
+    }
+
+    & img:nth-child(6){
+        place-self: center;
+    }
+
+    & img:nth-child(7){
+        place-self: center end;
+    }
+
+    & img:nth-child(8){
+        place-self: center;
+    }
+
+    & img:nth-child(9){
+        place-self: start end;
+    }
+
+    & img:nth-child(10){
+        place-self: end center;
+    }
+
+    & img:nth-child(11){
+        place-self: end center;
+    }
+
+    & img:nth-child(12){
+        place-self: center end;
+    }
+
+    & img:nth-child(13){
+        place-self: center end;
+    }
+
+    & img:nth-child(15){
+        place-self: center;
+    }
+}
