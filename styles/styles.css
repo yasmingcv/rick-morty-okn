@@ -89,4 +89,40 @@ header .nav__item:hover {
 }
 .planets img:nth-child(15) {
   place-self: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #272727;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.footer__menu__line {
+  width: 1px;
+  height: 85%;
+  background-color: #fff;
+}
+.footer__menu__nav {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  list-style: none;
+}
+.footer__menu__nav li {
+  text-decoration: none;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */
