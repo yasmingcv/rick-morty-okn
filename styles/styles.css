@@ -139,4 +139,88 @@ header .nav__item:hover {
   align-items: center;
   color: #fff;
   font-size: 1.2rem;
+}
+
+.planet-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 2.25rem;
+}
+.planet-details__text {
+  margin-right: 10%;
+}
+
+.planet-characters, .planet-characters__carousel {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.planet-characters__arrow-right {
+  rotate: 180deg;
+}
+.planet-characters__carousel {
+  margin: 80px;
+}
+.planet-characters__carousel__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #87F54E;
+  margin: 10px;
+  border-radius: 28px;
+  width: 310px;
+}
+.planet-characters__carousel__item img {
+  height: 380px;
+  width: 100%;
+  border-radius: 28px 28px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.planet-characters__carousel__item p {
+  color: #272727;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.planet-characters__carousel__item__rating {
+  background-color: #272727;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  color: #393939;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  place-self: center;
+}
+.planet-characters__carousel__item__rating img {
+  height: 27px;
+  width: auto;
+}
+.planet-characters__carousel__item__btn {
+  background-color: #272727;
+  color: #87F54E;
+  height: 94px;
+  width: 94px;
+  border-radius: 50%;
+  border: 4px solid #87F54E;
+  position: absolute;
+  font-size: 2.125rem;
+  font-weight: 500;
+  left: 63%;
+  top: 54%;
+  box-shadow: 0px 0px 50px -14px #000;
+}
+.planet-characters__carousel__item__star {
+  height: 10px;
+  width: 10px;
+  position: absolute;
 }/*# sourceMappingURL=styles.css.map */

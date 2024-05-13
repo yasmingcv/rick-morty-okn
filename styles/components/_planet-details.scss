@@ -1,0 +1,10 @@
+@use '../abstract/mixins';
+
+.planet-details{
+    @include mixins.flex-space-bt-color(row, 100%, #fff);
+    font-size: 2.25rem;
+
+    &__text{
+        margin-right: 10%;
+    }
+}
