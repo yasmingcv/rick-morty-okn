@@ -4,14 +4,17 @@
 .footer {
     @include mixins.flex-space-bt-color(row, 100%, #fff);
     background-color: variables.$secondary-color;
+    height: 110px;
 
     &__menu {
-        @include mixins.flex-space-bt-color(row, 40%);
+        @include mixins.flex-space-bt-color(row, 50%, #fff);
+        height: 100%;
+        padding-left: 5%;
 
         &__line {
             width: 1px;
-            height: 85%;
-            background-color: #fff;
+            height: 90px;
+            background: #fff;
         }
 
         &__nav {
@@ -19,10 +22,16 @@
             list-style: none;
 
             & li a{
-                color: inherit;
                 text-decoration: none;
+                color: inherit;
+                font-size: 1.2rem;
             }
         }
 
+    }
+
+    &__developers{
+        @include mixins.flex-space-bt-color(column, 30%, #fff);
+        font-size: 1.2rem;
     }
 }
