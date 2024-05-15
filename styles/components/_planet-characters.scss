@@ -62,10 +62,15 @@
                 box-shadow: 0px 0px 50px -14px #000;
             }
 
-            &__star{
-                height: 10px;
-                width: 10px;
+            &__star img{
+                height: 47px;
+                width: 47px;
                 position: absolute;
+                background-color: variables.$secondary-color;
+                border-radius: 50%;
+                padding: 8px;
+                top: 10px;
+                left: 10px;
             }
         }
     }
