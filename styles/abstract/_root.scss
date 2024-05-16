@@ -1,3 +1,5 @@
+@use './variables';
+
 body{
     display: flex;
     flex-direction: column;
@@ -11,4 +13,17 @@ body{
     background-repeat: repeat;
     font-family: 'IBM Plex Mono', monospace;
     overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: variables.$primary-color;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #252525;
 }

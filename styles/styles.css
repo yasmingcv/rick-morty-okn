@@ -13,6 +13,19 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #87F54E;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #252525;
+}
+
 header, header .nav {
   display: flex;
   flex-direction: row;
