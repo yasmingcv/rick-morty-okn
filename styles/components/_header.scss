@@ -1,15 +1,20 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
-    width: 100%;
+    padding: 20px;
+    width: 90%;
 
     img {
         width: 420px;
+
+        @include mixins.breakpoint(767px){
+            min-width: 180px;
+        }
     }
 
     .nav {
@@ -32,6 +37,22 @@ header {
 
         &__item:hover{
             transform: scale(1.2);
+        }
+
+        @include mixins.breakpoint(767px){
+            display: none;
+        }
+    }
+
+    .nav-resp img{
+        display: none;
+        min-width: 50px;
+        width: 66px;
+        height: auto;
+        padding-left: 10px;
+
+        @include mixins.breakpoint(767px){
+            display: block;
         }
     }
 }

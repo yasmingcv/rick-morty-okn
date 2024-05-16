@@ -4,22 +4,48 @@
 .footer {
     @include mixins.flex-space-bt-color(row, 100%, #fff);
     background-color: variables.$secondary-color;
-    height: 110px;
+    height: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include mixins.breakpoint(810px){
+        flex-direction: column
+    }
 
     &__menu {
         @include mixins.flex-space-bt-color(row, 50%, #fff);
         height: 100%;
         padding-left: 5%;
 
+        @include mixins.breakpoint(810px){
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+        }
+
+        img{
+            min-width: 100px;
+        }
+
         &__line {
             width: 1px;
             height: 90px;
             background: #fff;
+
+            @include mixins.breakpoint(810px){
+                display: none;
+            }
         }
 
         &__nav {
             @include mixins.flex-space-bt-color(row, 40%, #fff);
             list-style: none;
+
+            @include mixins.breakpoint(810px){
+                flex-direction: column;
+                padding-left: 0;
+            }
 
             & li a{
                 text-decoration: none;

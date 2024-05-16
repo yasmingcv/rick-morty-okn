@@ -1,18 +1,61 @@
 @use '../abstract/mixins';
 @use '../abstract/variables';
 
-.planet-characters{
+.planet-characters {
     @include mixins.flex-space-bt-color(row, 95%, #fff);
+    align-items: center;
 
-    &__arrow-right{
-        rotate: 180deg;
+    &__arrows {
+        &__arrow-right {
+            rotate: 180deg;
+        }
+
+        &__arrow-left2 {
+            display: none;
+        }
     }
 
-    &__carousel{
+
+    @include mixins.breakpoint(1200px) {
+        flex-direction: column;
+
+        &__arrow-left {
+            display: none;
+        }
+
+        &__arrows {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+            &__arrow-left2 {
+                display: block;
+            }
+        }
+
+    }
+
+
+    &__carousel {
         @extend .planet-characters;
         margin: 80px;
+        justify-content: center;
 
-        &__item{
+        @include mixins.breakpoint(1200px) {
+            flex-direction: row;
+
+            & &__item:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include mixins.breakpoint(767px) {
+            & &__item:nth-child(2) {
+                display: none;
+            }
+        }
+
+        &__item {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -21,33 +64,33 @@
             border-radius: 28px;
             width: 310px;
 
-            img{
+            img {
                 height: 380px;
                 width: 100%;
                 border-radius: 28px 28px 0 0;
                 object-fit: cover;
             }
 
-            p{
+            p {
                 color: variables.$secondary-color;
                 font-size: 1.5rem;
                 padding: 10px;
             }
 
-            &__rating{
+            &__rating {
                 background-color: variables.$secondary-color;
                 @include mixins.flex-space-bt-color(row, 60%, #393939);
                 padding: 10px;
                 border-radius: 12px 12px 0 0;
                 place-self: center;
 
-                img{
+                img {
                     height: 27px;
                     width: auto;
                 }
             }
 
-            &__btn{
+            &__btn {
                 background-color: variables.$secondary-color;
                 color: variables.$primary-color;
                 height: 94px;
@@ -62,7 +105,7 @@
                 box-shadow: 0px 0px 50px -14px #000;
             }
 
-            &__star img{
+            &__star img {
                 height: 47px;
                 width: 47px;
                 position: absolute;

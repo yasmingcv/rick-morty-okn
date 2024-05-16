@@ -10,6 +10,7 @@ body {
   background-image: url("../assets/cielo-estrellado.png");
   background-repeat: repeat;
   font-family: "IBM Plex Mono", monospace;
+  overflow-x: hidden;
 }
 
 header, header .nav {
@@ -17,11 +18,16 @@ header, header .nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
-  width: 100%;
+  padding: 20px;
+  width: 90%;
 }
 header img, header .nav img {
   width: 420px;
+}
+@media (max-width: 767px) {
+  header img, header .nav img {
+    min-width: 180px;
+  }
 }
 header .nav {
   gap: 80px;
@@ -41,6 +47,23 @@ header .nav__item {
 header .nav__item:hover {
   transform: scale(1.2);
 }
+@media (max-width: 767px) {
+  header .nav {
+    display: none;
+  }
+}
+header .nav-resp img {
+  display: none;
+  min-width: 50px;
+  width: 66px;
+  height: auto;
+  padding-left: 10px;
+}
+@media (max-width: 767px) {
+  header .nav-resp img {
+    display: block;
+  }
+}
 
 .planets {
   display: grid;
@@ -48,6 +71,28 @@ header .nav__item:hover {
   grid-auto-flow: column;
   grid-template-rows: repeat(3, minmax(100px, 300px));
   grid-template-columns: repeat(auto-fit, minmax(120px, 250px));
+}
+@media (max-width: 1200px) {
+  .planets {
+    grid-template-rows: repeat(4, minmax(100px, 300px));
+  }
+}
+@media (max-width: 1080px) {
+  .planets {
+    grid-template-rows: repeat(5, minmax(100px, 300px));
+  }
+}
+@media (max-width: 990px) {
+  .planets {
+    grid-template-rows: repeat(7, minmax(100px, 300px));
+  }
+}
+@media (max-width: 767px) {
+  .planets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .planets img:nth-child(1) {
   place-self: center end;
@@ -100,7 +145,15 @@ header .nav__item:hover {
   align-items: center;
   color: #fff;
   background-color: #272727;
-  height: 110px;
+  height: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (max-width: 810px) {
+  .footer {
+    flex-direction: column;
+  }
 }
 .footer__menu {
   display: flex;
@@ -112,10 +165,25 @@ header .nav__item:hover {
   height: 100%;
   padding-left: 5%;
 }
+@media (max-width: 810px) {
+  .footer__menu {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+.footer__menu img {
+  min-width: 100px;
+}
 .footer__menu__line {
   width: 1px;
   height: 90px;
   background: #fff;
+}
+@media (max-width: 810px) {
+  .footer__menu__line {
+    display: none;
+  }
 }
 .footer__menu__nav {
   display: flex;
@@ -125,6 +193,12 @@ header .nav__item:hover {
   align-items: center;
   color: #fff;
   list-style: none;
+}
+@media (max-width: 810px) {
+  .footer__menu__nav {
+    flex-direction: column;
+    padding-left: 0;
+  }
 }
 .footer__menu__nav li a {
   text-decoration: none;
@@ -153,6 +227,26 @@ header .nav__item:hover {
 .planet-details__text {
   margin-right: 10%;
 }
+.planet-details__img-small {
+  display: none;
+}
+@media (max-width: 945px) {
+  .planet-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .planet-details__img {
+    display: none;
+  }
+  .planet-details__img-small {
+    display: block;
+    width: 70%;
+  }
+  .planet-details__text {
+    font-size: 2rem;
+    margin: 10px;
+  }
+}
 
 .planet-characters, .planet-characters__carousel {
   display: flex;
@@ -161,12 +255,46 @@ header .nav__item:hover {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  align-items: center;
 }
-.planet-characters__arrow-right {
+.planet-characters__arrows__arrow-right {
   rotate: 180deg;
+}
+.planet-characters__arrows__arrow-left2 {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .planet-characters, .planet-characters__carousel {
+    flex-direction: column;
+  }
+  .planet-characters__arrow-left {
+    display: none;
+  }
+  .planet-characters__arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .planet-characters__arrows__arrow-left2 {
+    display: block;
+  }
 }
 .planet-characters__carousel {
   margin: 80px;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .planet-characters__carousel {
+    flex-direction: row;
+  }
+  .planet-characters__carousel .planet-characters__carousel__item:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .planet-characters__carousel .planet-characters__carousel__item:nth-child(2) {
+    display: none;
+  }
 }
 .planet-characters__carousel__item {
   position: relative;
